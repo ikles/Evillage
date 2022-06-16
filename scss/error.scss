@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+$nr: no-repeat;
+$rb: right bottom;
+$rt: right top;
+$rc: right center;
+$cc: center center;
+$lc: left center;
+$lb: left bottom;
+$bc: bottom center;
+$i: !important;
+$tr: transparent;
+$bord: 1px solid #EAEAEA;
+$black: #000;
+$bcol: #f3ebdc;
+$font2: 'Ubuntu', sans-serif;
+$brd: #D8DBE0;
+
+@import "_reset.scss";
+@import "_vars.scss";
+
+
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+textarea {  
+  &:hover, &:active, &:focus {    
+    outline: none;    
+  }
+}
+
+body {  
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  min-height: 100vh;
+  &.ohi {
+    overflow: hidden;
+  }
+}
+
+
+
+
+
+.contain {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.error-page {  
+  padding-top: 120px;
+  height: 100vh;
+  background: #007DC3 url("../img/error-page-bg.svg") $nr right -82px bottom -111px;
+}
+
+
+
+.h1--white {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 70px;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+  line-height: 1.1;
+}
+
+.error__text {
+  font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 1.25;
+color: #FFF;
+}
+
+.error__btn {
+  margin-top: 120px;
+  font-weight: 700;
+font-size: 13px;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+color: #FFFFFF;
+display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 56px;
+        background: #4EAEE4;
+border-radius: 4px;
+padding: 0 30px;
+transition: 0.5s;
+&:hover {
+  text-decoration: none;
+  background: #62BBED;
+}
+&:active {
+  background: #43A4DB;
+}
+}

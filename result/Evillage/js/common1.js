@@ -6,14 +6,7 @@ jQuery(document).ready(function( $ ) {
 
   var lcs = localStorage;
 
-  $('#active *').each(function () {
-    let cls1 = $(this).attr('class');
-    if ( ! $(this).hasClass('contain') ) {
-      $(this).attr('class', 'advs'+cls1);
-      console.log(cls1);    
-    }    
-  });
-
+  
   
 
   if (localStorage.getItem('todos_num') !== null) {
@@ -43,9 +36,6 @@ for (key in lcs) {
   }
 }
 */
-
-
-
 
 $('body').append('<div class="keylinks341-w"> <ul class="keylinks341"></ul></div>');
 
@@ -560,7 +550,7 @@ $('body').keydown(function(e) {
 
 $('.obb_img').click(function () {
  $('#active').css( "object-fit", "cover").css( "width", "100%").css( "height", "100%");
- main_function();
+    main_function();
 });
 
 
@@ -2075,43 +2065,43 @@ $('.coll-7').click(function () {
 
 $('#coluu_2').click(function () {
   $('#active').append(
-    `<div class="w-row"><div class="contain"><div class="w-row" style="display: flex; justify-content: space-between;"><div class="w-col-6" style="width: 50%;"></div><div class="w-col-6" style="width: 50%;"></div></div></div></div>`
+`<div class="w-row"><div class="contain"><div class="w-row" style="display: flex; justify-content: space-between;"><div class="w-col-6" style="width: 50%;"></div><div class="w-col-6" style="width: 50%;"></div></div></div></div>`
     );
   main_function();
 });
 
 $('#coluu_3').click(function () {
   $('#active').append(
-    `<div class="w-row"><div class="contain"><div class="w-row" style="display: flex; justify-content: space-between;"><div class="w-col-4" style="width: 33.3333%;"></div></div></div></div>`
+`<div class="w-row"><div class="contain"><div class="w-row" style="display: flex; justify-content: space-between;"><div class="w-col-4" style="width: 33.3333%;"></div></div></div></div>`
     );
   main_function();
 });
 
 $('#coluu_4').click(function () {
   $('#active').append(
-    `<div class="w-row"><div class="contain"><div class="w-row" style="display: flex; justify-content: space-between;">
-    <div class="w-col-3" style="width: 25%;"></div></div></div></div>`
+`<div class="w-row"><div class="contain"><div class="w-row" style="display: flex; justify-content: space-between;">
+<div class="w-col-3" style="width: 25%;"></div></div></div></div>`
     );
   main_function();
 });
 
 $('#coluu_5').click(function () {
   $('#active').append(
-    `<div class="w-row"><div class="contain"><div class="w-row" style="display: flex; justify-content: space-between;"><div class="w-row" style="width: 20%;"></div></div></div></div>`
+`<div class="w-row"><div class="contain"><div class="w-row" style="display: flex; justify-content: space-between;"><div class="w-row" style="width: 20%;"></div></div></div></div>`
     );
   main_function();
 });
 
 $('#coluu_6').click(function () {
   $('#active').append(
-    `<div class="w-row"><div class="contain"><div class="w-row" style="display: flex; justify-content: space-between;"><div class="w-col-2" style="width: 16.6667%;"></div></div></div></div>`
+`<div class="w-row"><div class="contain"><div class="w-row" style="display: flex; justify-content: space-between;"><div class="w-col-2" style="width: 16.6667%;"></div></div></div></div>`
     );
   main_function();
 });
 
 $('#coluu_w').click(function () {
   $('#active').append(
-    `<div class="w-row"><div class="contain"><div class="w-row" style="display: flex; justify-content: space-between;"></div></div></div>`
+`<div class="w-row"><div class="contain"><div class="w-row" style="display: flex; justify-content: space-between;"></div></div></div>`
     );
   main_function();
 });
@@ -2185,14 +2175,12 @@ $('.coll-h5').click(function () {
 
 $('.coll-h6').click(function () {
   $('#active').append(`
-    <label class="label">
-    <input class="label-checkbox" type="checkbox">
+    <label class="label">    
     <span class="label-span"></span>
     <span class="label-span-txt">Текст</span>
     </label>
 
-    <label class="label-checked">
-    <input class="label-checkbox" type="checkbox">
+    <label class="label">
     <span class="label-span-checked"></span>
     <span class="label-span-txt">Текст</span>
     </label>

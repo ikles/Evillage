@@ -165,6 +165,7 @@ $(window).scroll(function(){
 
 
 $('.bfilter__select').fancySelect();
+$('.choose__select').fancySelect();
 
 
 $('.bfilter__label .fancy-select').click(function () {
