@@ -87,13 +87,25 @@
                     </div>
                   </div>
                   <div class="bfilter__col bfilter__col-grow">
-                    <div class="bfilter__label">
+                    <div class="bfilter__label bfilter__label-country">
                       <div class="bfilter__label-text">телефон</div>
-                      <input class="bfilter__input" type="text" name="phone" placeholder="+7" />
+                      <div class="bfilter__input-country-w">
+                        <div class="bfilter__input-country-code">
+                          <i class="rus"></i>
+                          <span>+7</span>
+                        </div>
+                        <input class="bfilter__input bfilter__input-country" type="text" name="phone"
+                        placeholder="495 123-45-67" />
+                      </div>
+                      <ul class="bfilter__country-open">
+                        <li data-mask="495 123-45-67"><i class="rus"></i>Россия <span>+7</span></li>
+                        <li data-mask="934 611-643"><i class="ukr"></i>Украина <span>+380</span></li>
+                        <li data-mask="962 25-69-74"><i class="bel"></i>Беларусь <span>+375</span></li>
+                      </ul>
                     </div>
                   </div>
                   <div class="bfilter__col bfilter__col-btn">
-                    <a href="#" class="bfilter__btn">Подобрать</a>
+                    <button class="bfilter__btn btn--blue">Подобрать</button>
                   </div>
                 </form>
               </div>
@@ -160,18 +172,24 @@
         <div class="contain">
           <h2 class="h2">Преимущества локации</h2>
           <div class="advloctabs">
-            <ul class="advloctabs__control">
-              <li class="advloctabs__control-item active">Расстояние до центра Батуми</li>
-              <li class="advloctabs__control-item">Природа и климат</li>
-              <li class="advloctabs__control-item">Пляж, море и интересные места</li>
-              <li class="advloctabs__control-item">Батуми — жемчужина у моря</li>
-              <li class="advloctabs__control-item">Транспортная доступность</li>
+            <ul class="advloctabs__control tabs__list">
+              <li class="advloctabs__control-item tabs__list-item active">Расстояние до центра Батуми</li>
+              <li class="advloctabs__control-item tabs__list-item">Природа и климат</li>
+              <li class="advloctabs__control-item tabs__list-item">Пляж, море и интересные места</li>
+              <li class="advloctabs__control-item tabs__list-item">Батуми — жемчужина у моря</li>
+              <li class="advloctabs__control-item tabs__list-item">Транспортная доступность</li>
             </ul>
-            <ul class="advloctabs__content">
-              <li class="advloctabs__content-item">
+
+            <ul class="advloctabs__content tabs__content-list">
+              <li class="advloctabs__content-item tabs__content-list-item active">
                 <img src="img/tab-1.jpg">
               </li>
+              <li class="advloctabs__content-item tabs__content-list-item">Природа и климат</li>
+              <li class="advloctabs__content-item tabs__content-list-item">Пляж, море и интересные места</li>
+              <li class="advloctabs__content-item tabs__content-list-item">Батуми — жемчужина у моря</li>
+              <li class="advloctabs__content-item tabs__content-list-item">Транспортная доступность</li>
             </ul>
+
           </div>
         </div>
       </section>
@@ -194,13 +212,13 @@
                   <option value="Апартаменты">Апартаменты</option>
                   <option value="Виллы">Виллы</option>
                 </select>
-              </div>    
+              </div>
               <div class="choose__col">
                 <select class="choose__select" name="square">
-                  <option value="75 м2 — 100 м2">75 м2 — 100 м2</option>              
-                  <option value="101 м2 — 200 м2">75 м2 — 100 м2</option>              
+                  <option value="75 м2 — 100 м2">75 м2 — 100 м2</option>
+                  <option value="101 м2 — 200 м2">75 м2 — 100 м2</option>
                 </select>
-              </div>   
+              </div>
               <div class="choose__col choose__col-big">
                 <select class="choose__select" name="money">
                   <option value="€500 000 — €1 000 000">€500 000 — €1 000 000</option>
@@ -211,7 +229,7 @@
                 <input class="choose__input" type="text" name="name" placeholder="Ваше имя" />
               </div>
               <div class="choose__col choose__col-2">
-                <input class="choose__input" type="text" name="phone" placeholder="+7" />
+                <input class="choose__input input--phone" type="text" name="phone" placeholder="+7" />
               </div>
               <div class="choose__col choose__col-2">
                 <button class="choose__btn btn">отправить заявку</button>
@@ -231,7 +249,7 @@
       </div>
       <div class="partof">
         <div class="contain">
-          <h2 class="h2 h2--center">Станьте частью крупнейшей <br> в мире гостиничной сети</h2>
+          <h2 class="partof__h2 h2 h2--center">Станьте частью крупнейшей <br> в мире гостиничной сети</h2>
         </div>
       </div>
       <div class="advtexts">
@@ -290,241 +308,425 @@
           </div>
         </div>
       </section>
-      
-      
-      <div class="ben">
+
+      <section class="consult section">
         <div class="contain">
-          <h2 class="h2 h2--center">Преимущества для инвесторов</h2>
-          <div class="ben__row">
-            <div class="ben__col">
-              <div class="ben__item">
-                <div class="ben__title">8% годовых и 30% капитализация</div>
-                <div class="ben__text">Ваш гарантированный доход и рост стоимости недвижимости. Всё фиксируется в договоре.</div>
-              </div>
+          <div class="consult__row">
+            <div class="consult__left">
+              <div class="consult__title">Мы — эксперты Wyndham</div>
+              <div class="consult__img-w"><img src="img/cons.jpg" class="consult__img"></div>
             </div>
-            <div class="ben__col">
-              <div class="ben__item">
-                <div class="ben__title">В Грузии нет налога на недвижимость</div>
-                <div class="ben__text">Тут самое низкое налоговое бремя в Европе. По данному показателю занимает третье место в мире.</div>
-              </div>
+            <div class="consult__right">
+              <form class="consult__form">
+                <div class="consult__top">
+                  <div class="consult__title">Закажите консультацию по всем вопросам</div>
+                  <div class="consult__subtitle">укажите удобный способ связи и свои контакты</div>
+                  <div class="consult__lbls">
+                    <label class="consult__lbl quesform__lbl">
+                      <input type="radio" name="social_type" checked>
+                      <span>
+                        <img src="img/soc-ques-1.svg" class="quesform__lbl-img" />
+                        <span>ВотсАпп</span>
+                      </span>
+                    </label>
+                    <label class="consult__lbl quesform__lbl">
+                      <input type="radio" name="social_type">
+                      <span>
+                        <img src="img/soc-ques-2.svg" class="quesform__lbl-img" />
+                        <span>Телеграм</span>
+                      </span>
+                    </label>
+                    <label class="consult__lbl quesform__lbl">
+                      <input type="radio" name="social_type">
+                      <span>
+                        <img src="img/call.svg" class="quesform__lbl-img" />
+                        <span>Прямой звонок</span>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="consult__form-w">
+                  <div class="consult__form-row">
+                    <input class="consult__input quesform__input" type="text" placeholder="Ваше имя" name="name">
+                    <input class="consult__input input--phone quesform__input" type="text" placeholder="+7" name="phone">
+                    <button class="consult__btn btn btn--blue">отправить заявку</button>
+                  </div>
+                </form>
+                <div class="consult__polyt">                  
+                 Отправляя заявку, я принимаю <a href="#">условия обработки своих  личных данных</a>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </section>
+
+     <div class="ben">
+      <div class="contain">
+        <h2 class="h2 h2--center">Преимущества для инвесторов</h2>
+        <div class="ben__row">
+          <div class="ben__col">
+            <div class="ben__item">
+              <div class="ben__title">8% годовых и 30% капитализация</div>
+              <div class="ben__text">Ваш гарантированный доход <br> и рост стоимости недвижимости. Всё фиксируется в
+              договоре.</div>
             </div>
-            <div class="ben__col">
-              <div class="ben__item">
-                <div class="ben__title">Ваши инвестиции в безопасности</div>
-                <div class="ben__text">Грузия из года в год стабильно сохраняет политический нейтралитет.</div>
-              </div>
+          </div>
+          <div class="ben__col">
+            <div class="ben__item">
+              <div class="ben__title">В Грузии нет налога на недвижимость</div>
+              <div class="ben__text">Тут самое низкое налоговое бремя в Европе. По данному показателю занимает третье
+              место в мире.</div>
             </div>
-            <div class="ben__col">
-              <div class="ben__item">
-                <div class="ben__title">ВНЖ в подарок при покупке от $100 000</div>
-                <div class="ben__text">А также полное юридическое сопровождение сделки и помощь в оформлении бизнеса.</div>
+          </div>
+          <div class="ben__col">
+            <div class="ben__item">
+              <div class="ben__title">Ваши инвестиции в безопасности</div>
+              <div class="ben__text">Грузия из года в год стабильно сохраняет политический нейтралитет.</div>
+            </div>
+          </div>
+          <div class="ben__col">
+            <div class="ben__item">
+              <div class="ben__title">ВНЖ в подарок при покупке от $100 000</div>
+              <div class="ben__text">А также полное юридическое сопровождение сделки и помощь в оформлении бизнеса.
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="scheme__img-w">
-        <img src="img/photo.jpg" class="scheme__img" />
-      </div>
-      <section class="about section">
-        <div class="contain">
-          <h2 class="h2 h2--center">Застройщик — European Village</h2>
-          <div class="about__subtitle">
-            Специализируемся на строительстве эксклюзивных объектов<br />
-            по европейским технологиям для комфортной жизни и инвестиций
-          </div>
-          <div class="abadvants">
-            <div class="abadvants__col">
-              <div class="abadvants__item">
-                <div class="abadvants__title">250 000 м2</div>
-                <div class="abadvants__text">
-                  площади успешно введено<br />
-                  в эксплуатацию
-                </div>
-              </div>
-            </div>
-            <div class="abadvants__col">
-              <div class="abadvants__item">
-                <div class="abadvants__title">$50+ млн</div>
-                <div class="abadvants__text">
-                  инвестировано в объекты компании;<br />
-                  сейчас активно возводятся новые
-                </div>
-              </div>
-            </div>
-            <div class="abadvants__col">
-              <div class="abadvants__item">
-                <div class="abadvants__title">Топ-10</div>
-                <div class="abadvants__text">
-                  грузинских брендов по версии<br />
-                  Forbes
-                </div>
+    </div>
+
+
+
+    <div class="scheme__img-w">
+      <img src="img/photo.jpg" class="scheme__img" />
+    </div>
+    <section class="about section">
+      <div class="contain">
+        <h2 class="about__h2 h2 h2--center">Застройщик — European Village</h2>
+        <div class="about__subtitle">
+          Специализируемся на строительстве эксклюзивных объектов<br />
+          по европейским технологиям для комфортной жизни и инвестиций
+        </div>
+        <div class="abadvants">
+          <div class="abadvants__col">
+            <div class="abadvants__item">
+              <div class="abadvants__title">250 000 м2</div>
+              <div class="abadvants__text">
+                площади успешно введено<br />
+                в эксплуатацию
               </div>
             </div>
           </div>
-          <div class="brands">
-            <div class="brands__item">
-              <div class="brands__img-w"><img src="img/logo-ad-1.png" /></div>
-              <div class="brands__text">«Во что вложить деньги в 2022 году: <br> инвестиции в недвижимость Батуми <br> с гарантиями доходности»</div>
+          <div class="abadvants__col">
+            <div class="abadvants__item">
+              <div class="abadvants__title">$50+ млн</div>
+              <div class="abadvants__text">
+                инвестировано в объекты компании;<br />
+                сейчас активно возводятся новые
+              </div>
             </div>
-            <div class="brands__item">
-              <div class="brands__img-w"><img src="img/logo-ad-2.png" /></div>
-              <div class="brands__text">«Инвестиционная привлекательность <br> рынка — один из основных критериев <br> оценки»</div>
+          </div>
+          <div class="abadvants__col">
+            <div class="abadvants__item">
+              <div class="abadvants__title">Топ-10</div>
+              <div class="abadvants__text">
+                грузинских брендов по версии<br />
+                Forbes
+              </div>
             </div>
-            <div class="brands__item">
-              <div class="brands__img-w"><img src="img/logo-ad-3.png" /></div>
-              <div class="brands__text">«Батуми — второй по значимости <br> город Грузии и популярнейший <br>черноморский курорт»</div>
+          </div>
+        </div>
+        <div class="brands">
+          <div class="brands__item">
+            <div class="brands__img-w"><img src="img/logo-ad-1.png" /></div>
+            <div class="brands__text">«Во что вложить деньги в 2022 году: <br> инвестиции в недвижимость Батуми <br> с
+            гарантиями доходности»</div>
+          </div>
+          <div class="brands__item">
+            <div class="brands__img-w"><img src="img/logo-ad-2.png" /></div>
+            <div class="brands__text">«Инвестиционная привлекательность <br> рынка — один из основных критериев <br>
+            оценки»</div>
+          </div>
+          <div class="brands__item">
+            <div class="brands__img-w"><img src="img/logo-ad-3.png" /></div>
+            <div class="brands__text">«Батуми — второй по значимости <br> город Грузии и популярнейший
+              <br>черноморский курорт»</div>
             </div>
             <div class="brands__item">
               <div class="brands__img-w"><img src="img/logo-ad-4.png" /></div>
-              <div class="brands__text">«Инвестиции в недвижимость Батуми — <br> безусловный тренд последних <br> нескольких лет»</div>
+              <div class="brands__text">«Инвестиции в недвижимость Батуми — <br> безусловный тренд последних <br>
+              нескольких лет»</div>
             </div>
           </div>
         </div>
       </section>
 
 
-      <div class="wrapper bord">
-        <div class="ques section">
-          <div class="contain">
-            <div class="ques__row">
-              <div class="ques__left">
-                <h2 class="h2">Частые вопросы</h2>
-                <div class="quesaccord">
-                  <div class="quesaccord__item">
-                    <div class="quesaccord__content">
-                      <a href="#" class="quesaccord__title active">Нужна ли виза в Грузию?</a>
-                      <div class="quesaccord__text">Для посещения нужен только загранпаспорт. Визовый режим для россиян, украинцев, белорусов и других иностранных граждан отменен.</div>
-                    </div>
-                    <div class="quesaccord__arrow-w"><a href="#" class="quesaccord__arrow-act"></a></div>
-                  </div>
-                  <div class="quesaccord__item">
-                    <div class="quesaccord__content"><a href="#" class="quesaccord__title">Сколько стоит жить в Грузии?</a></div>
-                    <div class="quesaccord__arrow-w"><a href="#" class="quesaccord__arrow"></a></div>
-                  </div>
-                  <div class="quesaccord__item">
-                    <div class="quesaccord__content"><a href="#" class="quesaccord__title">Какая погода в Гонио осенью-зимой?</a></div>
-                    <div class="quesaccord__arrow-w"><a href="#" class="quesaccord__arrow"></a></div>
-                  </div>
-                  <div class="quesaccord__item">
-                    <div class="quesaccord__content"><a href="#" class="quesaccord__title">Есть ли русскоязычные школы и сады?</a></div>
-                    <div class="quesaccord__arrow-w"><a href="#" class="quesaccord__arrow"></a></div>
-                  </div>
-                  <div class="quesaccord__item">
-                    <div class="quesaccord__content"><a href="#" class="quesaccord__title">Я иностранец. Какие документы мне нужны для покупки недвижимости?</a></div>
-                    <div class="quesaccord__arrow-w"><a href="#" class="quesaccord__arrow"></a></div>
-                  </div>
-                  <div class="quesaccord__item">
-                    <div class="quesaccord__content"><a href="#" class="quesaccord__title">На каких языках оформляется моя сделка?</a></div>
-                    <div class="quesaccord__arrow-w"><a href="#" class="quesaccord__arrow"></a></div>
-                  </div>
+      <div class="ques section">
+        <div class="contain">
+          <div class="ques__row">
+            <div class="ques__left">
+              <h2 class="h2">Частые вопросы</h2>                  
+              <div class="quesaccord accordion-container">
+                <div class="quesaccord__item accordion-item">
+                  <div class="quesaccord__content">
+                    <div class="quesaccord__title accordion-header active-header">Нужна ли виза в Грузию?</div>
+                    <div class="quesaccord__text accordion-content open-content">Для посещения нужен только загранпаспорт. Визовый режим для россиян,
+                    украинцев, белорусов и других иностранных граждан отменен.</div>
+                  </div>                      
                 </div>
+                <div class="quesaccord__item accordion-item">
+                  <div class="quesaccord__content">
+                    <div class="quesaccord__title accordion-header">Сколько стоит жить в Грузии?</div>
+                    <div class="quesaccord__text accordion-content">Для посещения нужен только загранпаспорт. Визовый режим для россиян,
+                    украинцев, белорусов и других иностранных граждан отменен.</div>
+                  </div>                      
+                </div>
+                <div class="quesaccord__item accordion-item">
+                  <div class="quesaccord__content">
+                    <div class="quesaccord__title accordion-header">Сколько стоит жить в Грузии?</div>
+                    <div class="quesaccord__text accordion-content">Для посещения нужен только загранпаспорт. Визовый режим для россиян,
+                    украинцев, белорусов и других иностранных граждан отменен.</div>
+                  </div>                      
+                </div>
+                <div class="quesaccord__item accordion-item">
+                  <div class="quesaccord__content">
+                    <div class="quesaccord__title accordion-header">Есть ли русскоязычные школы и сады?</div>
+                    <div class="quesaccord__text accordion-content">Для посещения нужен только загранпаспорт. Визовый режим для россиян,
+                    украинцев, белорусов и других иностранных граждан отменен.</div>
+                  </div>                      
+                </div>
+                <div class="quesaccord__item accordion-item">
+                  <div class="quesaccord__content">
+                    <div class="quesaccord__title accordion-header">Я иностранец. Какие документы мне нужны <br>
+                    для покупки недвижимости?</div>
+                    <div class="quesaccord__text accordion-content">Для посещения нужен только загранпаспорт. Визовый режим для россиян,
+                    украинцев, белорусов и других иностранных граждан отменен.</div>
+                  </div>                      
+                </div>
+                <div class="quesaccord__item accordion-item">
+                  <div class="quesaccord__content">
+                    <div class="quesaccord__title accordion-header">На каких языках оформляется моя сделка?</div>
+                    <div class="quesaccord__text accordion-content">Для посещения нужен только загранпаспорт. Визовый режим для россиян,
+                    украинцев, белорусов и других иностранных граждан отменен.</div>
+                  </div>                      
+                </div>
+
+
               </div>
-              <div class="ques__right">
-                <div class="quesform">
-                  <div class="quesform__ch">выберите удобный способ связи</div>
-                  <form class="quesform__form">
-                    <div class="quesform__lbls">
-                      <label class="quesform__lbl">  
-                       <input type="radio" name="social_type" checked>
-                       <span>
+            </div>
+            <div class="ques__right">
+              <h2 class="h2">Ждём ваш вопрос</h2>
+              <div class="quesform">                
+                <div class="quesform__ch">выберите удобный способ связи</div>
+                <form class="quesform__form">
+                  <div class="quesform__lbls">
+                    <label class="quesform__lbl">
+                      <input type="radio" name="social_type" checked>
+                      <span>
                         <img src="img/soc-ques-1.svg" class="quesform__lbl-img" />
                         ВотсАпп
                       </span>
                     </label>
-                    <label class="quesform__lbl">  
-                     <input type="radio" name="social_type">      
-                     <span>
-                      <img src="img/soc-ques-2.svg" class="quesform__lbl-img" />
-                      Телеграм
-                    </span>
-                  </label>
-
-
-                </div>
-                <div class="quesform__tit">оставьте свои контакты</div>
-                <input class="quesform__input" type="text" placeholder="Ваш телефон" /><input class="quesform__input" type="text" placeholder="Телефон" />
-                <textarea class="quesform__textarea" placeholder="Что вас интересует?"></textarea><a href="#" class="quesform__btn btn btn--blue">задать свой вопрос</a>
-                <div class="ques-r-form-trm-w"></div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="cont section">
-      <div class="contain">
-        <div class="cont__row">
-          <div class="cont__left">
-            <h2 class="h2">Контактная <br>
-            информация</h2>
-            <div class="cont__tabs">
-              <a href="#" class="cont__tab act">Офис продаж в Батуми</a>
-              <a href="#" class="cont__tab">Офис в Гонио</a>
-            </div>
-            <div class="cont__info">
-              <div class="cont__info-item">Ул. Кутаиси, 6</div>
-              <div class="cont__info-item">Работаем с 10 утра до 6 вечера, пн-пт</div>
-              <a href="#" class="cont__info-item">hello@ecity.ge</a><a href="#" class="cont__info-item">+995 577 29 28 87</a>
-            </div>
-          </div>
-          <div class="cont__right"><img src="img/map.jpg" class="cont__map-img" /></div>
-        </div>
-      </div>
-    </div>
-
-
-
-
-
-  </main>
-  <footer class="footer">
-    <div class="contain">
-      <div class="footer__row">
-        <div class="footer__top">
-          <div class="footer__row-1">
-            <a href="#" class="footer__logo"><img src="img/logo-ft.jpg" /></a>
-            <ul class="footer__mnu">
-              <li><a href="#">wyndham elite family</a></li>
-              <li><a href="#">wyndham aqua residence</a></li>
-              <li><a href="#">wyndham riviera</a></li>
-              <li><a href="#">EV elite</a></li>
-              <li><a href="#">EV new</a></li>
-            </ul>
-            <div class="footer__info">
-              <a href="#" class="footer__link">ka</a><a href="#" class="footer__link">eng</a><a href="#" class="footer__phone">+995 577 29 28 87</a>
-              <div class="footer__socs">
-                <a href="#" class="footer__soc"><img src="img/soc-ft-1.svg" /></a>
-                <a href="#" class="footer__soc"><img src="img/soc-ft-2.svg" /></a>
+                    <label class="quesform__lbl">
+                      <input type="radio" name="social_type">
+                      <span>
+                        <img src="img/soc-ques-2.svg" class="quesform__lbl-img" />
+                        Телеграм
+                      </span>
+                    </label>
+                  </div>
+                  <div class="quesform__tit">оставьте свои контакты</div>
+                  <input class="quesform__input" type="text" placeholder="Имя" name="name" /><input
+                  class="quesform__input" type="text" placeholder="Телефон" name="phone" />
+                  <textarea class="quesform__textarea" placeholder="Что вас интересует?" name="mess"></textarea>
+                  <button class="quesform__btn btn btn--blue">задать свой вопрос</button>
+                </form>
               </div>
-              <a href="#" class="footer__btn btn">заказать звонок</a>
             </div>
           </div>
         </div>
-        <div class="footer__bottom">
-          <div class="footer__row-2">
-            <div class="footer__copy">© 2021 European Village LLC</div>
-            <div class="footer__inff">Информация на сайте не является публичной офертой.</div>
-            <a href="#" class="footer__polyt">Политика обработки личных данных</a>
+      </div>
+      <div class="cont section">
+        <div class="contain">
+          <div class="cont__row">
+            <div class="cont__left">
+              <h2 class="h2">Контактная <br>
+              информация</h2>
+              <div class="cont__tabs">
+                <div class="cont__tabs-control">
+                  <ul class="tabs__list">
+                    <li class="cont__tab tabs__list-item active">Офис продаж в Батуми</li>
+                    <li class="cont__tab tabs__list-item">Офис в Гонио</li>
+                  </ul>
+                </div>
+                <div class="cont__info">
+                  <ul class="tabs__content-list">
+                    <li class="tabs__content-list-item active">
+                      <div class="cont__info-item">Ул. Кутаиси, 6</div>
+                      <div class="cont__info-item">Работаем с 10 утра до 6 вечера, пн-пт</div>
+                      <a href="#" class="cont__info-item">hello@ecity.ge</a><a href="#" class="cont__info-item">+995 577 29
+                      28 87</a>
+                    </li>
+                    <li class="tabs__content-list-item">
+                      <div class="cont__info-item">Работаем с 10 утра до 6 вечера, пн-пт</div>
+                      <div class="cont__info-item">Ул. Кутаиси, 6</div>
+                      <a href="#" class="cont__info-item">+995 577 29 28 87</a>
+                      <a href="#" class="cont__info-item">hello@ecity.ge</a>
+                    </li> 
+                  </ul>                
+                </div>
+              </div>
+            </div>
+            <div class="cont__right"><img src="img/map.jpg" class="cont__map-img" /></div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
-  <div class="contain" style="display: none;">
-    <a href="" class="btn-o">scdvdfv</a>
-    <a href="" class="btn">scdvdfv</a>
-    <a href="#" class="top__btn btn btn--green"><i class="wa"></i>whatsapp</a>
-    <a href="#" class="top__btn btn btn--blue"><i class="wa"></i>whatsapp</a>
-  </div>
-</div>
-<!--wrapper-->
 
-<script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/slick.js"></script>
-<script src="js/fancySelect.js"></script>
-<script src="js/jquery.fancybox.min.js"></script>
-<script src="js/common.js"></script>
+
+
+
+
+    </main>
+    <footer class="footer">
+      <div class="contain">
+        <div class="footer__row">
+          <div class="footer__top">
+            <div class="footer__row-1">
+              <a href="#" class="footer__logo"><img src="img/logo-ft.jpg" /></a>
+              <ul class="footer__mnu">
+                <li><a href="#">wyndham elite family</a></li>
+                <li><a href="#">wyndham aqua residence</a></li>
+                <li><a href="#">wyndham riviera</a></li>
+                <li><a href="#">EV elite</a></li>
+                <li><a href="#">EV new</a></li>
+              </ul>
+              <div class="footer__info">
+                <a href="#" class="footer__link">ka</a><a href="#" class="footer__link">eng</a><a href="#"
+                class="footer__phone">+995 577 29 28 87</a>
+                <div class="footer__socs">
+                  <a href="#" class="footer__soc"><img src="img/soc-ft-1.svg" /></a>
+                  <a href="#" class="footer__soc"><img src="img/soc-ft-2.svg" /></a>
+                </div>
+                <a href="#" class="footer__btn btn">заказать звонок</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__row-2">
+              <div class="footer__copy">© 2021 European Village LLC</div>
+              <div class="footer__inff">Информация на сайте не является публичной офертой.</div>
+              <a href="#" class="footer__polyt">Политика обработки личных данных</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>        
+  </div>
+  <!--wrapper-->
+
+  <div class="modal-overlay modal-overlay_1">        
+    <div class="modal-form__layout"></div>
+    <div class="modal-form__block">     
+      <div class="modal-form__inner">
+        <span class="modal-close modal-close_1">X</span>
+        <div class="popcard">
+          <div class="popcard__tags">
+            <a href="#" class="projects__tag act">старт продаж</a>
+            <a href="#" class="projects__tag">750 м до моря</a>
+            <a href="#" class="projects__tag">сдача в 2024 году</a>
+          </div>
+          <div class="popcard__title">Elite Family Residence</div>
+          <div class="popcard__subtitle">Элитные апартаменты для отдыха всей семьёй.</div>
+          <div class="popcard__items">
+            <div class="popcard__col">
+              <div class="popcard__item">
+                <a href="#" class="popcard__img-w"><img src="img/popcard1.jpg" /></a>
+                <a href="#" class="popcard__item-title">
+                  Студии 31,8 м2<br />
+                  от €42 000
+                </a>
+                <div class="popcard__txt">Первый взнос €13 600</div>
+              </div>
+            </div>
+            <div class="popcard__col">
+              <div class="popcard__item">
+                <a href="#" class="popcard__img-w"><img src="img/popcard2.jpg" /></a>
+                <a href="#" class="popcard__item-title">
+                  Студии 31,8 м2<br />
+                  от €42 000
+                </a>
+                <div class="popcard__txt">Первый взнос €13 600</div>
+              </div>
+            </div>
+            <div class="popcard__col">
+              <div class="popcard__item">
+                <a href="#" class="popcard__img-w"><img src="img/popcard3.jpg" /></a>
+                <a href="#" class="popcard__item-title">
+                  Студии 31,8 м2<br />
+                  от €42 000
+                </a>
+                <div class="popcard__txt">Первый взнос €13 600</div>
+              </div>
+            </div>
+            <div class="popcard__col">
+              <div class="popcard__item">
+                <a href="#" class="popcard__img-w"><img src="img/popcard4.jpg" /></a>
+                <a href="#" class="popcard__item-title">
+                  Студии 31,8 м2<br />
+                  от €42 000
+                </a>
+                <div class="popcard__txt">Первый взнос €13 600</div>
+              </div>
+            </div>
+          </div>
+          <div class="popinfo">
+            <div class="popinfo__left">
+              <div class="popinfo__item">
+                <div class="popinfo__title">Доход от $5000/год</div>
+                <div class="popinfo__text">Гарантированно; фиксируется в договоре</div>
+              </div>
+              <div class="popinfo__item">
+                <div class="popinfo__title">Рассрочка 0% на 36 мес.</div>
+                <div class="popinfo__text">Первый взнос 30% от всей стоимости</div>
+              </div>
+              <div class="popinfo__item">
+                <div class="popinfo__title">Опция обратного выкупа</div>
+                <div class="popinfo__text">Если захотите продать свой апартамент через 2-3 года</div>
+              </div>
+            </div>
+            <div class="popinfo__right">
+              <form class="popinfo__form">
+              <div class="popinfo__title">Расскажем всё о проекте</div>
+                <div class="popinfo__row">
+                  <div class="popinfo__col"><input name="name" class="popinfo__input" type="text" placeholder="Ваше имя" /></div>
+                  <div class="popinfo__col"><input name="phone" class="popinfo__input input--phone" type="text" placeholder="+7" /></div>
+                </div>
+                <button class="popinfo__btn btn--lightblue">получить всю информацию</button>
+                <div class="popinfo__confirm">Отправляя заявку, я принимаю условия обработки своих данных</div>
+              </form>
+              <div class="popthanks">
+                <div class="popthanks__row">
+                  <div class="popthanks__check"></div>
+                  <div class="popthanks__check-txt">Заявка отправлена! Мы скоро свяжемся с вами и ответим на все вопросы.</div>
+                </div>
+                <a href="#" class="popthanks__check-btn btn--lightblue">спасибо, жду</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div><!--modal-overlay-->
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/slick.js"></script>
+  <script src="js/fancySelect.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/common.js"></script>
 </body>
 
 </html>
