@@ -497,3 +497,107 @@ body {
     background: #62BBED; }
   .error__btn:active {
     background: #43A4DB; }
+
+@media (max-width: 575px) {
+  .h1--white {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center; }
+  .error__text {
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.5; }
+    .error__text br {
+      display: none; }
+  .error__btn {
+    margin-top: auto;
+    margin-bottom: 100px;
+    width: auto;
+    padding: 0 34px;
+    height: 48px; }
+  .error-page {
+    padding-top: 100px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background: #007DC3 url("../img/error-page-bg2.svg") no-repeat right 0px bottom 0px; }
+    .error-page .contain {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: 100%;
+      -webkit-flex-grow: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; } }
+
+@media (max-width: 375px) {
+  .error__btn {
+    padding: 0 14px; } }
+
+@media (max-height: 640px) {
+  .error-page {
+    padding-top: 50px; }
+  .error__btn {
+    margin-bottom: 20px; } }
+
+@media only screen and (max-width: 1440px) {
+  .contain {
+    max-width: 1170px; } }
+
+@media only screen and (max-width: 1199px) {
+  .contain {
+    max-width: 970px; }
+  .h2 {
+    margin-bottom: 30px;
+    font-size: 42px; } }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 991px) {
+  .contain {
+    max-width: 750px; } }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 767px) {
+  .contain {
+    max-width: 600px; }
+  .h2 {
+    font-size: 36px;
+    margin-bottom: 20px; } }
+
+@media only screen and (max-width: 640px) {
+  .contain {
+    max-width: 530px; }
+  .h2 {
+    font-size: 32px; } }
+
+@media only screen and (max-width: 575px) {
+  .h2 {
+    font-size: 26px;
+    margin-bottom: 16px; }
+  .contain {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px; }
+  .section {
+    padding: 24px 0; }
+  .show-575 {
+    display: block; }
+  .hide-575 {
+    display: none; } }
+
+@media only screen and (max-width: 320px) {
+  body, body > * {
+    width: auto;
+    min-width: 320px; } }
+
+@media only screen and (min-width: 1080px) {
+  .main-mnu {
+    display: block !important; }
+  .hidden-mnu {
+    display: none; } }

@@ -109,3 +109,55 @@ transition: 0.5s;
   background: #43A4DB;
 }
 }
+
+@media (max-width : 575px) {
+.h1--white {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.error__text {
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.5;
+  br {
+    display: none;
+  }
+}
+.error__btn {
+  margin-top: auto;
+  margin-bottom: 100px;
+  width: auto;
+  padding: 0 34px;
+  height: 48px;
+}
+.error-page {
+  padding-top: 100px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background: #007DC3 url("../img/error-page-bg2.svg") no-repeat right 0px bottom 0px;
+  .contain {
+    display: flex;
+    height: 100%;
+            flex-grow: 1;
+            flex-direction: column;
+            -webkit-align-items: center;
+                    align-items: center;
+  }
+}
+}
+@media (max-width : 375px) {
+.error__btn {
+  padding: 0 14px;
+}
+}
+
+@media (max-height : 640px) {
+.error-page {
+  padding-top: 50px;
+}
+.error__btn {
+  margin-bottom: 20px;
+}
+}
+@import "_media.scss";
