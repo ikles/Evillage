@@ -55,7 +55,7 @@
           </div>
           <div class="bfilter">
             <div class="contain">
-              <div class="bfilter__row">
+              <div class="bfilter__row hide-1199">
                 <form class="bfilter__form">
                   <div class="bfilter__col">
                     <div class="bfilter__label">
@@ -111,6 +111,7 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </header>
@@ -121,6 +122,62 @@
             <span>Недвижимость в Батуми для инвестиций, отдыха и жизни.</span><br />
             Под управлением крупнейшей сети отелей — <a href="#">WYNDHAM</a>
           </h2>
+
+          <div class="bfilter__row show-1199">
+            <form class="bfilter__form">
+              <div class="bfilter__col">
+                <div class="bfilter__label">
+                  <div class="bfilter__label-text">что вас интересует?</div>
+                  <select class="bfilter__select" name="type">
+                    <option value="Апартаменты">Апартаменты</option>
+                    <option value="Таунхаусы">Таунхаусы</option>
+                    <option value="Виллы">Виллы</option>
+                  </select>
+                </div>
+              </div>
+              <div class="bfilter__col">
+                <div class="bfilter__label">
+                  <div class="bfilter__label-text">цель покупки</div>
+                  <select class="bfilter__select" name="appoint">
+                    <option value="Для проживания">Для проживания</option>
+                    <option value="Для продажи">Для продажи</option>
+                  </select>
+                </div>
+              </div>
+              <div class="bfilter__col">
+                <div class="bfilter__label">
+                  <div class="bfilter__label-text">как к вам обращаться?</div>
+                  <input class="bfilter__input" type="text" name="name" placeholder="Константин" />
+                  <span class="bfilter__tooltip">
+                    Пожалуйста, введите <br>
+                    корректное имя
+                  </span>
+                </div>
+              </div>
+              <div class="bfilter__col bfilter__col-grow">
+                <div class="bfilter__label bfilter__label-country">
+                  <div class="bfilter__label-text">телефон</div>
+                  <div class="bfilter__input-country-w">
+                    <div class="bfilter__input-country-code">
+                      <i class="rus"></i>
+                      <span>+7</span>
+                    </div>
+                    <input class="bfilter__input bfilter__input-country" type="text" name="phone"
+                    placeholder="495 123-45-67" />
+                  </div>
+                  <ul class="bfilter__country-open">
+                    <li data-mask="495 123-45-67"><i class="rus"></i>Россия <span>+7</span></li>
+                    <li data-mask="934 611-643"><i class="ukr"></i>Украина <span>+380</span></li>
+                    <li data-mask="962 25-69-74"><i class="bel"></i>Беларусь <span>+375</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="bfilter__col bfilter__col-btn">
+                <button class="bfilter__btn btn--blue">Подобрать</button>
+              </div>
+            </form>
+          </div>
+
           <div class="projects__list">
             @@include('var/_projects__item.html',{
               "img":"img/projects-1.jpg",
@@ -172,24 +229,35 @@
         <div class="contain">
           <h2 class="h2">Преимущества локации</h2>
           <div class="advloctabs">
-            <ul class="advloctabs__control tabs__list">
-              <li class="advloctabs__control-item tabs__list-item active">Расстояние до центра Батуми</li>
-              <li class="advloctabs__control-item tabs__list-item">Природа и климат</li>
-              <li class="advloctabs__control-item tabs__list-item">Пляж, море и интересные места</li>
-              <li class="advloctabs__control-item tabs__list-item">Батуми — жемчужина у моря</li>
-              <li class="advloctabs__control-item tabs__list-item">Транспортная доступность</li>
-            </ul>
+            <div class="advloctabs__control-scroll">
+              <ul class="advloctabs__control tabs__list">
+                <li class="advloctabs__control-item tabs__list-item active">Расстояние до центра Батуми</li>
+                <li class="advloctabs__control-item tabs__list-item">Природа и климат</li>
+                <li class="advloctabs__control-item tabs__list-item">Пляж, море и интересные места</li>
+                <li class="advloctabs__control-item tabs__list-item">Батуми — жемчужина у моря</li>
+                <li class="advloctabs__control-item tabs__list-item">Транспортная доступность</li>
+              </ul>
+            </div>
 
             <ul class="advloctabs__content tabs__content-list">
               <li class="advloctabs__content-item tabs__content-list-item active">
                 <img src="img/tab-1.jpg">
               </li>
-              <li class="advloctabs__content-item tabs__content-list-item">Природа и климат</li>
-              <li class="advloctabs__content-item tabs__content-list-item">Пляж, море и интересные места</li>
-              <li class="advloctabs__content-item tabs__content-list-item">Батуми — жемчужина у моря</li>
-              <li class="advloctabs__content-item tabs__content-list-item">Транспортная доступность</li>
+              <li class="advloctabs__content-item tabs__content-list-item">
+                <span>Природа и климат</span>
+              </li>
+              <li class="advloctabs__content-item tabs__content-list-item">
+                <span>Пляж, море и интересные места</span>
+              </li>
+              <li class="advloctabs__content-item tabs__content-list-item">
+                <span>Батуми — жемчужина у моря</span>
+              </li>
+              <li class="advloctabs__content-item tabs__content-list-item"><span>Транспортная доступность</span>
+              </li>
             </ul>
-
+            <div class="advloctabs__text show-575">
+              Наслаждайтесь красотой природы, чистейшим морем и идеальной экологией всего в 10 минутах от центра Батуми.
+            </div>
           </div>
         </div>
       </section>
@@ -199,8 +267,8 @@
         <div class="contain">
           <form class="choose__form">
             <div class="choose__header">
-              <div class="choose__title">Подберите недвижимость <br>
-              и узнайте точную стоимость</div>
+              <div class="choose__title h2">Подберите недвижимость <br>
+                и узнайте точную <span class="hide-575">стоимость</span> <span class="show-575">цену</span></div>
               <div class="choose__subtitle">Заполните все необходимые поля — и мы свяжемся
                 с вами и поможем во всём разобраться. Будьте уверены,
               что купить недвижимость в Батуми просто и безопасно.</div>
@@ -267,11 +335,17 @@
         </div>
       </div>
       <div class="map-countries">
-        <img src="img/map-countries.jpg" class="map-countries__img" />
+        <picture>
+  <source class="lazy" srcset="img/map-countries.jpg" type="image/jpeg" media="(min-width:380px)" /> <!--меньше этого будет другая-->
+  <source class="lazy" srcset="img/map-countries2.jpg" type="image/jpeg" media="(min-width:200px)" /> <!--больше этого будет эта-->
+  <img src="img/map-countries.jpg" class="map-countries__img" />
+</picture>
+
+        
       </div>
       <section class="section services">
         <div class="contain">
-          <h2 class="h2 h2--center">Вам будут доступны все отельные сервисы</h2>
+          <h2 class="h2 h2--center">Вам будут доступны <br class="show-575"> все отельные сервисы</h2>
           <div class="services__row">
             <div class="services__col">
               <div class="services__img-w"><img src="img/services-1.svg" class="services__img" /></div>
@@ -635,14 +709,20 @@
           <div class="popcard__tags">
             <a href="#" class="projects__tag act">старт продаж</a>
             <a href="#" class="projects__tag">750 м до моря</a>
-            <a href="#" class="projects__tag">сдача в 2024 году</a>
+            <a href="#" class="projects__tag">сдача в 2024</a>
           </div>
           <div class="popcard__title">Elite Family Residence</div>
           <div class="popcard__subtitle">Элитные апартаменты для отдыха всей семьёй.</div>
           <div class="popcard__items">
             <div class="popcard__col">
               <div class="popcard__item">
-                <a href="#" class="popcard__img-w"><img src="img/popcard1.jpg" /></a>
+                <a href="#" class="popcard__img-w">
+                  <img src="img/popcard1.jpg" />
+                  <span>
+                    <span class="view">Вид из окна</span>
+                    <img src="img/popcard11.jpg" />
+                  </span>
+                </a>
                 <a href="#" class="popcard__item-title">
                   Студии 31,8 м2<br />
                   от €42 000
@@ -652,7 +732,12 @@
             </div>
             <div class="popcard__col">
               <div class="popcard__item">
-                <a href="#" class="popcard__img-w"><img src="img/popcard2.jpg" /></a>
+                <a href="#" class="popcard__img-w"><img src="img/popcard2.jpg" />
+                  <span>
+                    <span class="view">Вид из окна</span>
+                    <img src="img/popcard11.jpg" />
+                  </span>
+                </a>
                 <a href="#" class="popcard__item-title">
                   Студии 31,8 м2<br />
                   от €42 000
@@ -662,7 +747,12 @@
             </div>
             <div class="popcard__col">
               <div class="popcard__item">
-                <a href="#" class="popcard__img-w"><img src="img/popcard3.jpg" /></a>
+                <a href="#" class="popcard__img-w"><img src="img/popcard3.jpg" />
+                  <span>
+                    <span class="view">Вид из окна</span>
+                    <img src="img/popcard11.jpg" />
+                  </span>
+                </a>
                 <a href="#" class="popcard__item-title">
                   Студии 31,8 м2<br />
                   от €42 000
@@ -672,7 +762,12 @@
             </div>
             <div class="popcard__col">
               <div class="popcard__item">
-                <a href="#" class="popcard__img-w"><img src="img/popcard4.jpg" /></a>
+                <a href="#" class="popcard__img-w"><img src="img/popcard4.jpg" />
+                  <span>
+                    <span class="view">Вид из окна</span>
+                    <img src="img/popcard11.jpg" />
+                  </span>
+                </a>
                 <a href="#" class="popcard__item-title">
                   Студии 31,8 м2<br />
                   от €42 000
@@ -698,7 +793,7 @@
             </div>
             <div class="popinfo__right">
               <form class="popinfo__form">
-              <div class="popinfo__title">Расскажем всё о проекте</div>
+                <div class="popinfo__title">Расскажем всё о проекте</div>
                 <div class="popinfo__row">
                   <div class="popinfo__col"><input name="name" class="popinfo__input" type="text" placeholder="Ваше имя" /></div>
                   <div class="popinfo__col"><input name="phone" class="popinfo__input input--phone" type="text" placeholder="+7" /></div>

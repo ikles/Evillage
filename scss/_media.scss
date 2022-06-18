@@ -1,7 +1,17 @@
+@media only screen and (max-width : 1440px) {
+  .contain {
+    max-width: 1170px
+  }    
+}
+
 @media only screen and (max-width : 1199px) {
   .contain {
     max-width: 970px
   }    
+.h2 {
+    margin-bottom: 30px;
+    font-size: 42px;
+  }
 }
 
 
@@ -17,22 +27,43 @@
   .contain {
     max-width: 600px;
   }
+  .h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
 }      
 
 @media only screen and (max-width : 640px) {
   .contain {
     max-width: 530px;
   }
+  .h2 {
+    font-size: 32px;
+  }
 } 
 
 
 
-@media only screen and (max-width : 570px) {
+@media only screen and (max-width : 575px) {
+  .h2 {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
   .contain {
     width: 100%;
     max-width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .section {
+    padding: 32px 0;
+  }
+  .show-575 {
+    display: block;
+  }
+  .hide-575 {
+    display: none;
   }
 }
 

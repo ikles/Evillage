@@ -38,18 +38,19 @@
 
 
 body {  
-    &.active {
-        background: url("../img/1.jpg") no-repeat top 0px center;
-        .wrapper {
-            opacity: 0.4;
-        } 
-        .footer {
-            opacity: 0.4;
-        }
-        .get {
-            opacity: 0.4;
-        }
-    }    
+  &.active {
+    background: url("../img/1.jpg") no-repeat top 0px left -8px;
+    .error-page,    
+    .wrapper {
+      opacity: 0.4;
+    }         
+    .footer {
+      opacity: 0.4;
+    }
+    .get {
+      opacity: 0.4;
+    }
+  }    
 
 
 }

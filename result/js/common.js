@@ -52,14 +52,14 @@ $('.slider-1').slick({
 
 /*$('.wrapper').prepend('<span class="eye-3"></span>');
 let pg = parseInt(document.location.pathname.match(/\d+/))
-$('body').addClass('active').css('background-image', "url('../img/1.jpg')");
+$('body').addClass('active').css('background-image', "url('../img/404.jpg')");
 $('body:not(.active)').css('background-image', "unset");
 
 $('.eye-3').click(function (e) {
   e.preventDefault();  
   $('body').toggleClass('active');
   let pg = parseInt(document.location.pathname.match(/\d+/));
-  $('body.active').css('background-image', "url('../img/1.jpg')");
+  $('body.active').css('background-image', "url('../img/404.jpg')");
   $('body:not(.active)').css('background-image', "unset");
 
 });*/
