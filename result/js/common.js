@@ -24,25 +24,18 @@ jQuery(document).ready(function( $ ) {
 
 
 
-
-
-
-
-
-
-
-
-$('.slider-1').slick({
+$('.projects__slider').slick({
   infinite: true,    
-  speed: 6900,
-  slidesToScroll: 1,
-  autoplay: true,    
-  slidesToShow: 4,
+  speed: 600,
+  slidesToScroll: 1,  
+  slidesToShow: 1,
   cssEase: 'linear',
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 0,  
-  arrows: false,
+  arrows: true,
+  dots: true,
   pauseOnHover: true,  
+  adaptiveHeight: true
 });
 
 
@@ -107,7 +100,7 @@ $('.popthanks__check-btn').click(function () {
 $('a[href*=\\#]:not([href=\\#])').click(function () {
   elementClick = $(this).attr("href");
   destination = $(elementClick).offset().top;
-  $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination - 85}, 1100);
+  $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination - 0}, 1100);
   return false;
 });
 
@@ -200,13 +193,32 @@ function tabs(element) {
 }
 
 tabs('.advloctabs');
-tabs('.cont__tabs');
+//.cont__left
+
+
+$('.cont__tab').click(function () {
+  
+  const self = $(this);
+  let num = $(this).index();
+
+$('.cont__tab').removeClass('active');
+    $(this).addClass('active');    
+
+  $('.cont__tabs-content-list-1').find('.tabs__content-list-item').removeClass('active')
+  .eq(num).addClass('active');
+  $('.cont__tabs-content-list-2').find('.tabs__content-list-item').removeClass('active')
+  .eq(num).addClass('active');
+});
 
 
 $('.accordion-header').click(function () {
   $(this).toggleClass('active-header');
   $(this).next().slideToggle().toggleClass('open-content');
 });
+
+
+$(".phone_mask").mask("+7 (999) 999-99-99");
+$(".phone_mask-2").mask("(999) 999-99-99");
 
 
 }); //ready

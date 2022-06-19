@@ -23,13 +23,8 @@
 </head>
 
 <body>
-
   <div class="wrapper">
     <header class="header">
-
-
-
-
       <div class="banner">
         <div class="banner__inn">
           <div class="top">
@@ -37,16 +32,16 @@
               <div class="top__row">
                 <a href="#" class="logo"><img src="img/logo.svg" class="logo__img" /></a>
                 <ul class="top__ul">
-                  <li><a href="#">Апартаменты</a></li>
-                  <li><a href="#">таунхаусы</a></li>
-                  <li><a href="#">компания</a></li>
+                  <li><a href="#projects__list">Апартаменты</a></li>
+                  <li><a href="#projects__list">таунхаусы</a></li>
+                  <li><a href="#about">компания</a></li>
                 </ul>
                 <div class="top___r">
                   <a href="#" class="top__link">geo</a>
                   <a href="#" class="top__link">eng</a>
                   <a href="tel:+995 577 29 28 87" class="top__phone">+995 577 29 28 87</a>
                   <div class="top__actions">
-                    <a href="#" class="top__btn-soc btn btn--green"><i class="wa"></i>whatsapp</a>
+                    <a target="_blank" href="https://wa.clck.bar/9955772928" class="top__btn-soc btn btn--green"><i class="wa"></i>whatsapp</a>
                     <a href="#" class="top__btn btn">заказать звонок</a>
                   </div>
                 </div>
@@ -94,7 +89,7 @@
                           <i class="rus"></i>
                           <span>+7</span>
                         </div>
-                        <input class="bfilter__input bfilter__input-country" type="text" name="phone"
+                        <input class="bfilter__input bfilter__input-country phone_mask-2" type="text" name="phone"
                         placeholder="495 123-45-67" />
                       </div>
                       <ul class="bfilter__country-open">
@@ -162,7 +157,7 @@
                       <i class="rus"></i>
                       <span>+7</span>
                     </div>
-                    <input class="bfilter__input bfilter__input-country" type="text" name="phone"
+                    <input class="bfilter__input bfilter__input-country phone_mask-2" type="text" name="phone"
                     placeholder="495 123-45-67" />
                   </div>
                   <ul class="bfilter__country-open">
@@ -178,9 +173,10 @@
             </form>
           </div>
 
-          <div class="projects__list">
+          <div class="projects__list" id="projects__list">
             @@include('var/_projects__item.html',{
-              "img":"img/projects-1.jpg",
+              "id": "wyndham-aqua",
+              "img":"<div class='projects__slide'><img src='img/projects-1.jpg' class='projects__img' /></div><div class='projects__slide'><img src='img/projects-2.jpg' class='projects__img' /></div><div class='projects__slide'><img src='img/projects-3.jpg' class='projects__img' /></div>",
               "mq":"750 м до моря",
               "tit":"Wyndham Aqua",
               "subtit":"Элитные апартаменты для отдыха всей семьёй.",
@@ -194,7 +190,8 @@
               "babki":"Доход от $5000/год"
             })
             @@include('var/_projects__item.html',{
-              "img":"img/projects-3.jpg",
+              "id": "wyndham-riviera",
+              "img":"<div class='projects__slide'><img src='img/projects-2.jpg' class='projects__img' /></div><div class='projects__slide'><img src='img/projects-3.jpg' class='projects__img' /></div><div class='projects__slide'><img src='img/projects-1.jpg' class='projects__img' /></div>",
               "mq":"850 м до моря",
               "tit":"Wyndham Riviera",
               "subtit":"Первый отель из таунхаусов и вилл в Западной Грузии.",
@@ -208,7 +205,8 @@
               "babki":"Доход от $14 000/год"
             })
             @@include('var/_projects__item.html',{
-              "img":"img/projects-2.jpg",
+              "id": "elite-family-residence",              
+              "img":"<div class='projects__slide'><img src='img/projects-3.jpg' class='projects__img' /></div><div class='projects__slide'><img src='img/projects-1.jpg' class='projects__img' /></div><div class='projects__slide'><img src='img/projects-2.jpg' class='projects__img' /></div>",
               "mq":"750 м до моря",
               "tit":"Elite Family Residence ",
               "subtit":"Элитные апартаменты для отдыха всей семьёй.",
@@ -297,7 +295,7 @@
                   <input class="choose__input" type="text" name="name" placeholder="Ваше имя" />
                 </div>
                 <div class="choose__col choose__col-2">
-                  <input class="choose__input input--phone" type="text" name="phone" placeholder="+7" />
+                  <input class="choose__input input--phone phone_mask" type="text" name="phone" placeholder="+7" />
                 </div>
                 <div class="choose__col choose__col-2">
                   <button class="choose__btn btn">отправить заявку</button>
@@ -422,7 +420,7 @@
                   <div class="consult__form-w">
                     <div class="consult__form-row">
                       <input class="consult__input quesform__input" type="text" placeholder="Ваше имя" name="name">
-                      <input class="consult__input input--phone quesform__input" type="text" placeholder="+7" name="phone">
+                      <input class="consult__input input--phone quesform__input phone_mask" type="text" placeholder="+7" name="phone">
                       <button class="consult__btn btn btn--blue">отправить заявку</button>
                     </div>
                   </form>
@@ -482,7 +480,7 @@
 
 
       </div>
-      <section class="about section">
+      <section class="about section" id="about">
         <div class="contain">
           <h2 class="about__h2 h2 h2--center">Застройщик — European Village</h2>
           <div class="about__subtitle">
@@ -620,7 +618,7 @@
                     </div>
                     <div class="quesform__tit">оставьте свои контакты</div>
                     <input class="quesform__input" type="text" placeholder="Имя" name="name" /><input
-                    class="quesform__input" type="text" placeholder="Телефон" name="phone" />
+                    class="quesform__input phone_mask" type="text" placeholder="Телефон" name="phone" />
                     <textarea class="quesform__textarea" placeholder="Что вас интересует?" name="mess"></textarea>
                     <button class="quesform__btn btn btn--blue">задать свой вопрос</button>
                   </form>
@@ -643,7 +641,7 @@
                     </ul>
                   </div>
                   <div class="cont__info">
-                    <ul class="tabs__content-list">
+                    <ul class="cont__tabs-content-list-1">
                       <li class="tabs__content-list-item active">
                         <div class="cont__info-item">Ул. Кутаиси, 6</div>
                         <div class="cont__info-item">Работаем с 10 утра до 6 вечера, пн-пт</div>
@@ -660,176 +658,184 @@
                   </div>
                 </div>
               </div>
-              <div class="cont__right"><img src="img/map.jpg" class="cont__map-img" /></div>
+              <div class="cont__right">
+               <ul class="cont__tabs-content-list-2">
+                <li class="tabs__content-list-item active">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.2056066770024!2d41.639630615383155!3d41.65129947924087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40678638c60fd7cb%3A0xcf88cb15f140e44f!2zNiBLdXRhaXNpIFN0LCBCYXR1bWksINCT0YDRg9C30LjRjw!5e0!3m2!1sru!2sru!4v1655637040940!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </li>
+                <li class="tabs__content-list-item">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1492.7193232731915!2d41.56611707720993!3d41.55975019806936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4067914834d9e031%3A0xdf719b7fb7cecca7!2sWyndham%20Residence!5e0!3m2!1sru!2sru!4v1655638743042!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
-
-
-
-
-
-      </main>
-      <footer class="footer">
-        <div class="contain">
-          <div class="footer__row">
-            <div class="footer__top">
-              <div class="footer__row-1">
-                <a href="#" class="footer__logo"><img src="img/logo-ft.jpg" /></a>
-                <ul class="footer__mnu">
-                  <li><a href="#">wyndham elite family</a></li>
-                  <li><a href="#">wyndham aqua <span class="hide-575">residence</span></a></li>
-                  <li><a href="#">wyndham riviera</a></li>
-                  <li><a href="#">EV elite</a></li>
-                  <li><a href="#">EV new</a></li>
-                </ul>
-                <div class="footer__info">
-                  <a href="#" class="footer__link">ka</a><a href="#" class="footer__link">eng</a><a href="#"
-                  class="footer__phone">+995 577 29 28 87</a>
-                  <div class="footer__socs">
-                    <a href="#" class="footer__soc"><img src="img/soc-ft-1.svg" /></a>
-                    <a href="#" class="footer__soc"><img src="img/soc-ft-2.svg" /></a>
-                  </div>
-                  <a href="#" class="footer__btn-2 top__btn-soc btn btn--green"><i class="wa"></i>whatsapp</a>
-                  <a href="#" class="footer__btn btn">заказать звонок</a>
-                </div>
-              </div>
-            </div>
-            <div class="footer__bottom">
-              <div class="footer__row-2">
-                <div class="footer__copy">© 2021 European Village LLC</div>
-                <div class="footer__inff">Информация на сайте не является публичной офертой.</div>
-                <a href="#" class="footer__polyt">Политика обработки личных данных</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>        
-    </div>
-    <!--wrapper-->
-
-    <div class="modal-overlay modal-overlay_1">        
-      <div class="modal-form__layout"></div>
-      <div class="modal-form__block">     
-        <div class="modal-form__inner">
-          <span class="modal-close modal-close_1">X</span>
-          <div class="popcard">
-            <div class="popcard__tags">
-              <a href="#" class="projects__tag act">старт продаж</a>
-              <a href="#" class="projects__tag">750 м до моря</a>
-              <a href="#" class="projects__tag">сдача в 2024</a>
-            </div>
-            <div class="popcard__title">Elite Family Residence</div>
-            <div class="popcard__subtitle">Элитные апартаменты для отдыха всей семьёй.</div>
-            <div class="popcard__items">
-              <div class="popcard__col">
-                <div class="popcard__item">
-                  <a href="#" class="popcard__img-w">
-                    <img src="img/popcard1.jpg" />
-                    <span>
-                      <span class="view">Вид из окна</span>
-                      <img src="img/popcard11.jpg" />
-                    </span>
-                  </a>
-                  <a href="#" class="popcard__item-title">
-                    Студии 31,8 м2<br />
-                    от €42 000
-                  </a>
-                  <div class="popcard__txt">Первый взнос €13 600</div>
-                </div>
-              </div>
-              <div class="popcard__col">
-                <div class="popcard__item">
-                  <a href="#" class="popcard__img-w"><img src="img/popcard2.jpg" />
-                    <span>
-                      <span class="view">Вид из окна</span>
-                      <img src="img/popcard11.jpg" />
-                    </span>
-                  </a>
-                  <a href="#" class="popcard__item-title">
-                    Студии 31,8 м2<br />
-                    от €42 000
-                  </a>
-                  <div class="popcard__txt">Первый взнос €13 600</div>
-                </div>
-              </div>
-              <div class="popcard__col">
-                <div class="popcard__item">
-                  <a href="#" class="popcard__img-w"><img src="img/popcard3.jpg" />
-                    <span>
-                      <span class="view">Вид из окна</span>
-                      <img src="img/popcard11.jpg" />
-                    </span>
-                  </a>
-                  <a href="#" class="popcard__item-title">
-                    Студии 31,8 м2<br />
-                    от €42 000
-                  </a>
-                  <div class="popcard__txt">Первый взнос €13 600</div>
-                </div>
-              </div>
-              <div class="popcard__col">
-                <div class="popcard__item">
-                  <a href="#" class="popcard__img-w"><img src="img/popcard4.jpg" />
-                    <span>
-                      <span class="view">Вид из окна</span>
-                      <img src="img/popcard11.jpg" />
-                    </span>
-                  </a>
-                  <a href="#" class="popcard__item-title">
-                    Студии 31,8 м2<br />
-                    от €42 000
-                  </a>
-                  <div class="popcard__txt">Первый взнос €13 600</div>
-                </div>
-              </div>
-            </div>
-            <div class="popinfo">
-              <div class="popinfo__left">
-                <div class="popinfo__item">
-                  <div class="popinfo__title">Доход от $5000/год</div>
-                  <div class="popinfo__text">Гарантированно; фиксируется в договоре</div>
-                </div>
-                <div class="popinfo__item">
-                  <div class="popinfo__title">Рассрочка 0% на 36 мес.</div>
-                  <div class="popinfo__text">Первый взнос 30% от всей стоимости</div>
-                </div>
-                <div class="popinfo__item">
-                  <div class="popinfo__title">Опция обратного выкупа</div>
-                  <div class="popinfo__text">Если захотите продать свой апартамент через 2-3 года</div>
-                </div>
-              </div>
-              <div class="popinfo__right">
-                <form class="popinfo__form">
-                  <div class="popinfo__title">Расскажем всё о проекте</div>
-                  <div class="popinfo__row">
-                    <div class="popinfo__col"><input name="name" class="popinfo__input" type="text" placeholder="Ваше имя" /></div>
-                    <div class="popinfo__col"><input name="phone" class="popinfo__input input--phone" type="text" placeholder="+7" /></div>
-                  </div>
-                  <button class="popinfo__btn btn--lightblue">получить всю информацию</button>
-                  <div class="popinfo__confirm">Отправляя заявку, я принимаю условия обработки своих данных</div>
-                </form>
-                <div class="popthanks">
-                  <div class="popthanks__row">
-                    <div class="popthanks__check"></div>
-                    <div class="popthanks__check-txt">Заявка отправлена! Мы скоро свяжемся с вами и ответим на все вопросы.</div>
-                  </div>
-                  <a href="#" class="popthanks__check-btn btn--lightblue">спасибо, жду</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
         </div>
       </div>
-    </div><!--modal-overlay-->
 
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/slick.js"></script>
-    <script src="js/fancySelect.js"></script>
-    <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/common.js"></script>
-  </body>
 
-  </html>
+
+
+
+    </main>
+    <footer class="footer">
+      <div class="contain">
+        <div class="footer__row">
+          <div class="footer__top">
+            <div class="footer__row-1">
+              <a href="#" class="footer__logo"><img src="img/logo-ft.jpg" /></a>
+              <ul class="footer__mnu">
+                <li><a href="#elite-family-residence">elite family residence</a></li>
+                <li><a href="#wyndham-aqua">wyndham aqua</a></li>
+                <li><a href="#wyndham-riviera">wyndham riviera</a></li>                
+              </ul>
+              <div class="footer__info">
+                <a href="#" class="footer__link">ka</a><a href="#" class="footer__link">eng</a><a href="#"
+                class="footer__phone">+995 577 29 28 87</a>
+                <div class="footer__socs">
+                  <a target="_blank" href="https://wa.clck.bar/9955772928" class="footer__soc"><img src="img/soc-ft-1.svg" /></a>
+                  <a href="#" class="footer__soc"><img src="img/soc-ft-2.svg" /></a>
+                </div>
+                <a target="_blank" href="https://wa.clck.bar/9955772928" class="footer__btn-2 top__btn-soc btn btn--green"><i class="wa"></i>whatsapp</a>
+                <a href="#" class="footer__btn btn">заказать звонок</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__row-2">
+              <div class="footer__copy">© 2021 European Village LLC</div>
+              <div class="footer__inff">Информация на сайте не является публичной офертой.</div>
+              <a href="#" class="footer__polyt">Политика обработки личных данных</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>        
+  </div>
+  <!--wrapper-->
+
+  <div class="modal-overlay modal-overlay_1">        
+    <div class="modal-form__layout"></div>
+    <div class="modal-form__block">     
+      <div class="modal-form__inner">
+        <span class="modal-close modal-close_1">X</span>
+        <div class="popcard">
+          <div class="popcard__tags">
+            <a href="#" class="projects__tag act">старт продаж</a>
+            <a href="#" class="projects__tag">750 м до моря</a>
+            <a href="#" class="projects__tag">сдача в 2024</a>
+          </div>
+          <div class="popcard__title">Elite Family Residence</div>
+          <div class="popcard__subtitle">Элитные апартаменты для отдыха всей семьёй.</div>
+          <div class="popcard__items">
+            <div class="popcard__col">
+              <div class="popcard__item">
+                <a href="#" class="popcard__img-w">
+                  <img src="img/popcard1.jpg" />
+                  <span>
+                    <span class="view">Вид из окна</span>
+                    <img src="img/popcard11.jpg" />
+                  </span>
+                </a>
+                <a href="#" class="popcard__item-title">
+                  Студии 31,8 м2<br />
+                  от €42 000
+                </a>
+                <div class="popcard__txt">Первый взнос €13 600</div>
+              </div>
+            </div>
+            <div class="popcard__col">
+              <div class="popcard__item">
+                <a href="#" class="popcard__img-w"><img src="img/popcard2.jpg" />
+                  <span>
+                    <span class="view">Вид из окна</span>
+                    <img src="img/popcard11.jpg" />
+                  </span>
+                </a>
+                <a href="#" class="popcard__item-title">
+                  Студии 31,8 м2<br />
+                  от €42 000
+                </a>
+                <div class="popcard__txt">Первый взнос €13 600</div>
+              </div>
+            </div>
+            <div class="popcard__col">
+              <div class="popcard__item">
+                <a href="#" class="popcard__img-w"><img src="img/popcard3.jpg" />
+                  <span>
+                    <span class="view">Вид из окна</span>
+                    <img src="img/popcard11.jpg" />
+                  </span>
+                </a>
+                <a href="#" class="popcard__item-title">
+                  Студии 31,8 м2<br />
+                  от €42 000
+                </a>
+                <div class="popcard__txt">Первый взнос €13 600</div>
+              </div>
+            </div>
+            <div class="popcard__col">
+              <div class="popcard__item">
+                <a href="#" class="popcard__img-w"><img src="img/popcard4.jpg" />
+                  <span>
+                    <span class="view">Вид из окна</span>
+                    <img src="img/popcard11.jpg" />
+                  </span>
+                </a>
+                <a href="#" class="popcard__item-title">
+                  Студии 31,8 м2<br />
+                  от €42 000
+                </a>
+                <div class="popcard__txt">Первый взнос €13 600</div>
+              </div>
+            </div>
+          </div>
+          <div class="popinfo">
+            <div class="popinfo__left">
+              <div class="popinfo__item">
+                <div class="popinfo__title">Доход от $5000/год</div>
+                <div class="popinfo__text">Гарантированно; фиксируется в договоре</div>
+              </div>
+              <div class="popinfo__item">
+                <div class="popinfo__title">Рассрочка 0% на 36 мес.</div>
+                <div class="popinfo__text">Первый взнос 30% от всей стоимости</div>
+              </div>
+              <div class="popinfo__item">
+                <div class="popinfo__title">Опция обратного выкупа</div>
+                <div class="popinfo__text">Если захотите продать свой апартамент через 2-3 года</div>
+              </div>
+            </div>
+            <div class="popinfo__right">
+              <form class="popinfo__form">
+                <div class="popinfo__title">Расскажем всё о проекте</div>
+                <div class="popinfo__row">
+                  <div class="popinfo__col"><input name="name" class="popinfo__input" type="text" placeholder="Ваше имя" /></div>
+                  <div class="popinfo__col"><input name="phone" class="popinfo__input input--phone phone_mask" type="text" placeholder="+7" /></div>
+                </div>
+                <button class="popinfo__btn btn--lightblue">получить всю информацию</button>
+                <div class="popinfo__confirm">Отправляя заявку, я принимаю условия обработки своих данных</div>
+              </form>
+              <div class="popthanks">
+                <div class="popthanks__row">
+                  <div class="popthanks__check"></div>
+                  <div class="popthanks__check-txt">Заявка отправлена! Мы скоро свяжемся с вами и ответим на все вопросы.</div>
+                </div>
+                <a href="#" class="popthanks__check-btn btn--lightblue">спасибо, жду</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div><!--modal-overlay-->
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/slick.js"></script>
+  <script src="js/fancySelect.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/common.js"></script>
+</body>
+
+</html>
