@@ -47,14 +47,12 @@ $('.projects__slider').slick({
 let pg = parseInt(document.location.pathname.match(/\d+/))
 $('body').addClass('active').css('background-image', "url('../img/404.jpg')");
 $('body:not(.active)').css('background-image', "unset");
-
 $('.eye-3').click(function (e) {
   e.preventDefault();  
   $('body').toggleClass('active');
   let pg = parseInt(document.location.pathname.match(/\d+/));
   $('body.active').css('background-image', "url('../img/404.jpg')");
   $('body:not(.active)').css('background-image', "unset");
-
 });*/
 
 /************************************/
@@ -83,6 +81,7 @@ function popup(openLink, windowEl, closeEl) {
 }
 
 popup('.projects__btn-2', '.modal-overlay_1', '.modal-close_1');
+popup('.top__btn, .footer__btn', '.modal-overlay_2', '.modal-close_2');
 
 
 $('.popinfo__btn').click(function (e) {  
@@ -92,10 +91,21 @@ $('.popthanks').fadeIn();
 });
 
 
+$('.popcallback__btn').click(function (e) {  
+  e.preventDefault()
+  $('.popcallback__content').hide();
+$('.popcallback__thanks').fadeIn();
+});
+
+
+
 $('.popthanks__check-btn').click(function () {
   $('.modal-overlay_1').fadeOut();
 });
 
+$('.popcallback__btn-2').click(function () {
+  $('.modal-overlay_2').fadeOut();
+});
 
 $('a[href*=\\#]:not([href=\\#])').click(function () {
   elementClick = $(this).attr("href");
@@ -192,8 +202,20 @@ function tabs(element) {
   });
 }
 
-tabs('.advloctabs');
-//.cont__left
+
+/*23.06.2022*/
+
+$(window).resize(function() {
+  if( $(window).width() > 991 ) {
+    tabs('.advloctabs');
+  }
+});
+
+if( $(window).width() > 991 ) {
+  tabs('.advloctabs');
+}
+
+/*end 23.06.2022*/
 
 
 $('.cont__tab').click(function () {
@@ -221,5 +243,19 @@ $(".phone_mask").mask("+7 (999) 999-99-99");
 $(".phone_mask-2").mask("(999) 999-99-99");
 
 
-}); //ready
+  $(window).resize(function() {
+    min_992()
+  });
 
+
+function min_992() {
+  /*if ($(window).width() < 992 ) {
+    let widthT = $('.advloctabs').width();
+    $('.tabs__content-list-item').css('width', widthT);
+  }*/
+}
+
+min_992();
+
+
+}); //ready

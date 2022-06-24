@@ -82,7 +82,28 @@
                     </div>
                   </div>
                   <div class="bfilter__col bfilter__col-grow">
-                    <div class="bfilter__label bfilter__label-country">
+                    
+
+
+                    <div class="bfilter__label valid bfilter__label-country">
+                        <div class="bfilter__label-text">телефон</div>
+                        <div class="bfilter__input-country-w">
+                            <div class="bfilter__input-country-code">
+                                <i class="rus"></i>
+                                <span>+7</span>
+                            </div>
+                            <input class="bfilter__input bfilter__input-country phone_mask-2 valid" type="text" name="phone" required="" placeholder="495 123-45-67" aria-invalid="false"><label id="phone-error" class="error" for="phone" style="/* display: none; */">вмвмваммва</label>
+                        </div>
+                        <ul class="bfilter__country-open" wfd-invisible="true">
+                            <li data-mask="495 123-45-67"><i class="rus"></i>Россия <span wfd-invisible="true">+7</span></li>
+                            <li data-mask="934 611-643"><i class="ukr"></i>Украина <span wfd-invisible="true">+380</span>
+                            </li>
+                            <li data-mask="962 25-69-74"><i class="bel"></i>Беларусь <span wfd-invisible="true">+375</span>
+                            </li>
+                        </ul>
+                    </div>
+
+               <!--      <div class="bfilter__label bfilter__label-country">
                       <div class="bfilter__label-text">телефон</div>
                       <div class="bfilter__input-country-w">
                         <div class="bfilter__input-country-code">
@@ -97,7 +118,8 @@
                         <li data-mask="934 611-643"><i class="ukr"></i>Украина <span>+380</span></li>
                         <li data-mask="962 25-69-74"><i class="bel"></i>Беларусь <span>+375</span></li>
                       </ul>
-                    </div>
+                    </div> -->
+
                   </div>
                   <div class="bfilter__col bfilter__col-btn">
                     <button class="bfilter__btn btn--blue">Подобрать</button>
@@ -241,16 +263,21 @@
               <li class="advloctabs__content-item tabs__content-list-item active">
                 <img src="img/tab-1.jpg">
               </li>
-              <li class="advloctabs__content-item tabs__content-list-item">
-                <span>Природа и климат</span>
+              <li class="advloctabs__content-item tabs__content-list-item ">
+                
+                <img src="img/tab-1.jpg">
               </li>
               <li class="advloctabs__content-item tabs__content-list-item">
-                <span>Пляж, море и интересные места</span>
+                
+                <img src="img/tab-1.jpg">
               </li>
               <li class="advloctabs__content-item tabs__content-list-item">
-                <span>Батуми — жемчужина у моря</span>
+                
+                <img src="img/tab-1.jpg">
               </li>
-              <li class="advloctabs__content-item tabs__content-list-item"><span>Транспортная доступность</span>
+              <li class="advloctabs__content-item tabs__content-list-item">
+                
+                <img src="img/tab-1.jpg">
               </li>
             </ul>
             <div class="advloctabs__text show-575">
@@ -599,7 +626,7 @@
                 <h2 class="h2">Ждём ваш вопрос</h2>
                 <div class="quesform">                
                   <div class="quesform__ch">выберите удобный способ связи</div>
-                  <form class="quesform__form">
+      <!--             <form class="quesform__form">
                     <div class="quesform__lbls">
                       <label class="quesform__lbl">
                         <input type="radio" name="social_type" checked>
@@ -621,7 +648,35 @@
                     class="quesform__input phone_mask" type="text" placeholder="Телефон" name="phone" />
                     <textarea class="quesform__textarea" placeholder="Что вас интересует?" name="mess"></textarea>
                     <button class="quesform__btn btn btn--blue">задать свой вопрос</button>
-                  </form>
+                  </form> -->
+
+
+<form class="quesform__form valid" id="questionForm" novalidate="novalidate">
+                        <div class="quesform__lbls">
+                            <label class="quesform__lbl">
+                                <input type="radio" value="whatsapp" name="social" checked="" wfd-invisible="true">
+                                <span>
+                          <img src="/local/templates/wyndham/assets/img/soc-ques-1.svg" class="quesform__lbl-img">
+                          ВотсАпп
+                        </span>
+                            </label>
+                            <label class="quesform__lbl">
+                                <input type="radio" value="telegram" name="social" wfd-invisible="true">
+                                <span>
+                          <img src="/local/templates/wyndham/assets/img/soc-ques-2.svg" class="quesform__lbl-img">
+                          Телеграм
+                        </span>
+                            </label>
+                        </div>
+                        <div class="quesform__tit">оставьте свои контакты</div>
+                        <input class="quesform__input error" type="text" required="" placeholder="Имя*" name="name" aria-invalid="true"><label id="name-error" class="error" for="name">Это поле необходимо заполнить.</label><input class="quesform__input phone_mask error" required="" type="text" placeholder="Телефон*" name="phone"><label id="phone-error" class="error" for="phone">Это поле необходимо заполнить.</label>
+                        <textarea class="quesform__textarea error" required="" placeholder="Что вас интересует?*" name="mess"></textarea><label id="mess-error" class="error" for="mess">Это поле необходимо заполнить.</label>
+                        <div class="consult__polyt" style="margin-bottom: 15px;padding-left: 0;">
+                            Отправляя заявку, я принимаю <a href="/policy/" target="_blank">условия обработки своих личных данных</a>
+                        </div>
+                        <button class="quesform__btn btn btn--blue">задать свой вопрос</button>
+                    </form>
+
                 </div>
               </div>
             </div>
@@ -829,6 +884,80 @@
       </div>
     </div>
   </div><!--modal-overlay-->
+
+
+
+  <div class="modal-overlay modal-overlay_min modal-overlay_2">      
+    <div class="modal-form__layout"></div>
+    <div class="modal-form__block">     
+      <div class="modal-form__inner">
+        <span class="modal-close modal-close_2">X</span>
+        
+        <div class="popcallback">
+          <div class="popcallback__content">
+            <div class="popcallback__title">Мы вам позвоним</div>
+            <div class="popcallback__subtitle">укажите способ связи и свои контакты</div>
+            <form class="popcallback__form">
+              <div class="consult__lbls popcallback__lbls">
+                <label class="consult__lbl quesform__lbl">
+                  <input type="radio" name="social_type" checked>
+                  <span>
+                    <img src="img/soc-ques-1.svg" class="quesform__lbl-img" />
+                    <span>ВотсАпп</span>
+                  </span>
+                </label>
+                <label class="consult__lbl quesform__lbl">
+                  <input type="radio" name="social_type">
+                  <span>
+                    <img src="img/soc-ques-2.svg" class="quesform__lbl-img" />
+                    <span>Телеграм</span>
+                  </span>
+                </label>
+                <label class="consult__lbl quesform__lbl">
+                  <input type="radio" name="social_type">
+                  <span>
+                    <img src="img/call.svg" class="quesform__lbl-img" />
+                    <span>Прямой звонок</span>
+                  </span>
+                </label>
+              </div>
+
+              <div class="consult__form-w">
+                <div class="consult__form-row">
+                  <input class="consult__input quesform__input" type="text" placeholder="Ваше имя" name="name">
+                  <input class="consult__input input--phone quesform__input phone_mask" type="text" placeholder="+7" name="phone">
+                  <button class="popcallback__btn btn btn--blue">отправить заявку</button>
+                </div>
+
+                <div class="consult__polyt">                  
+                  Отправляя заявку, я принимаю <a href="#">условия обработки своих данных</a>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="popcallback__thanks">
+            <div class="popcallback__thanks-inn">
+              <div class="popcallback__check"></div>
+
+              <div class="popcallback__text">
+                <span>Заявка отправлена!</span>
+                <br>
+                Мы скоро свяжемся с вами
+                и ответим на все вопросы.
+              </div>
+              <a href="#" class="popcallback__btn-2 btn btn--blue">спасибо, жду</a>
+            </div>
+          </div>
+        </div>
+
+        
+
+      </div>
+    </div>
+  </div><!--modal-overlay-->
+
+
+
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/slick.js"></script>
